@@ -1,6 +1,10 @@
 import { Box, Flex, HStack } from "@chakra-ui/react";
 
 export function Header() {
+  function scrollToBottom() {
+    window.scrollTo(1, document.body.scrollHeight);
+  }
+
   return (
     <Flex
       as="header"
@@ -12,7 +16,7 @@ export function Header() {
       m="0 auto"
     >
       <HStack
-        spacing="200px"
+        spacing={{ base: "50px", md: "100px", lg: "200px" }}
         fontWeight="bold"
         fontSize="14px"
         textAlign="center"
@@ -35,7 +39,14 @@ export function Header() {
         >
           Home
         </Box>
-        <Box as="a" cursor="pointer" p="5px" h="100%" color="#e2f4ff">
+        <Box
+          as="a"
+          cursor="pointer"
+          p="5px"
+          h="100%"
+          color="#e2f4ff"
+          onClick={() => scrollToBottom()}
+        >
           Skills
         </Box>
         <Box as="a" cursor="pointer" p="5px" h="100%" color="#e2f4ff">

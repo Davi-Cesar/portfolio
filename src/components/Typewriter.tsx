@@ -5,7 +5,7 @@ interface textProps {
   develop: string;
 }
 
-export function TextTime({ develop }: textProps) {
+export function Typewriter({ develop }: textProps) {
   const [text, setText] = useState("");
   const [i, setI] = useState(0);
 
@@ -26,7 +26,7 @@ export function TextTime({ develop }: textProps) {
 
   return (
     <>
-      <Text fontSize="40px" p="15px 0" fontWeight="bold">
+      <Text fontSize="40px" p="15px 0" fontWeight="bold" color="cyan.600">
         {text}
       </Text>
     </>
