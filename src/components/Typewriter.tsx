@@ -20,13 +20,13 @@ export function Typewriter({ develop }: textProps) {
   };
 
   useEffect(() => {
-    setTimeout(() => writerWindows(develop, i), 150);
+    setTimeout(() => writerWindows(develop, i), 200);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [writerWindows, i]);
 
   return (
     <>
-      <Text fontSize="40px" p="15px 0" fontWeight="bold" color="cyan.600">
+      <Text fontSize="40px" p="15px 0" fontWeight="medium" color="cyan.600">
         {text}
       </Text>
     </>

@@ -1,11 +1,89 @@
-import { SkillsExperience } from "@/components/SkillsExperience";
-import { Box, Flex, Text, HStack, keyframes } from "@chakra-ui/react";
-import { motion } from "framer-motion";
+import { WorkItem } from "@/components/WorkItem";
+import { Box, Text, Grid, GridItem } from "@chakra-ui/react";
 
 export default function Works() {
   return (
     <>
-      <h2>dasd</h2>
+      <Grid
+        h="100%"
+        w="100%"
+        p="2rem 0rem"
+        templateRows="repeat(1fr 3fr)"
+        templateColumns={{ base: "1fr", md: "1fr  2fr", lg: "1fr  2fr" }}
+        gap={4}
+        id="works"
+      >
+        <GridItem
+          rowSpan={8}
+          colSpan={1}
+          justifySelf="center"
+          position="-webkit-sticky"
+        >
+          <Box // Ball Dark
+            position="sticky"
+            padding="2rem"
+            top="0"
+            left="0"
+            borderRadius="100%"
+            display="flex"
+            textAlign="center"
+          >
+            <Box
+              as="h2"
+              top="10px"
+              fontFamily="Saira"
+              fontSize="50px"
+              fontWeight="bold"
+              textAlign="justify"
+              color="cyan.600"
+            >
+              Works
+              <Text
+                fontFamily="Outfit"
+                fontWeight="normal"
+                fontSize="16px"
+                color="gray.500"
+                textAlign="left"
+              >
+                During my training at IMD participated in some projects. See
+                some of them:
+              </Text>
+            </Box>
+          </Box>
+        </GridItem>
+        <WorkItem
+          number={1}
+          image={"cecane.png"}
+          name={"CECANE"}
+          text={"Implementação do Site oficial do CECANE/UFRN."}
+          link={"https://cecane.ccs.ufrn.br/"}
+        />
+        <WorkItem
+          number={2}
+          image={"postocerto.png"}
+          name={"Alinny e Davi"}
+          text={
+            ""
+          }
+          link={"https://alinny-davi.vercel.app/"}
+        />
+        <WorkItem
+          number={3}
+          image={"worldtrip.png"}
+          name={"worldtrip"}
+          text={"Implementação de um site de viagens."}
+          link={"https://github.com/Davi-Cesar/worldtrip"}
+        />
+        <WorkItem
+          number={4}
+          image={"easyscrum.png"}
+          name={"Easy Scrum"}
+          text={
+            "Aplicativo para gestão de equipes de projeto, aplicando os conceitos do Scrum."
+          }
+          link={"https://github.com/Kathamala/easy_scrum"}
+        />
+      </Grid>
     </>
   );
 }

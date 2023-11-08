@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Box, Flex, HStack, Image, Text, keyframes } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 
@@ -51,9 +51,11 @@ export default function HomePage() {
         justify="space-between"
         align="center"
         p="2rem 0rem"
+        id="home"
+        //bgGradient="linear(60deg, #012941 0%, teal.900 50%)"
       >
         <Flex
-          w={{ base: "100%", md: "100%", lg: "50%" }}
+          w={{ base: "10%", md: "10%", lg: "50%" }}
           h="100%"
           justify="center"
           align="center"
@@ -62,11 +64,12 @@ export default function HomePage() {
             bgColor="rgba(3, 9, 23, 0.055)"
             backdropFilter="auto"
             backdropBlur="30px"
-            w={{ base: "100%", md: "100%", lg: "400px" }}
-            h={{ base: "100%", md: "100%", lg: "450px" }}
+            w={{ base: "100vw", md: "400px", lg: "400px" }}
+            h={{ base: "100%", md: "400px", lg: "450px" }}
             zIndex="3"
             textAlign="justify"
             margin="0 auto"
+            overflow="visible"
           >
             <Flex
               align="center"
@@ -78,7 +81,7 @@ export default function HomePage() {
               <CodeHighlighter code={code} language="javascript" />
             </Flex>
           </Box>
-          <Box // Ball Dark
+          <Box // Ball Ligth
             as={motion.div}
             animation={animationbluelight}
             position="absolute"
@@ -91,12 +94,12 @@ export default function HomePage() {
             zIndex="1"
             boxShadow="0 0 20px #83defa"
           />
-          <Box // Ball Ligth
+          <Box // Ball Dark
             as={motion.div}
             animation={animationblue}
             position="absolute"
             padding="2"
-            bg="#2AA5EA"
+            bg="cyan.600"
             width="120px"
             height="120px"
             borderRadius="100%"
@@ -109,15 +112,17 @@ export default function HomePage() {
             <Image
               as={motion.img}
               animation={animationImage}
-              borderRadius="100%"
+              //borderRadius="100%"
               boxSize="220px"
-              objectFit="cover"
+              borderRadius="full"
               boxShadow="0 0 30px #000000"
-              src="https://avatars.githubusercontent.com/u/47856235?s=400&u=00115b6a5c3a3c4bc47e2ae35e47d088a4f3e6b9&v=4"
+              src="./perfil.jpg"
               alt="Davi César"
+              objectFit="cover"
+              align="top"
             />
 
-            <Flex align="center" w="100%" width="100%">
+            <Flex align="center" w="100%" width="100%" fontWeight="light">
               <Typewriter develop="Developer" />
               <Box
                 as={motion.div}
@@ -126,7 +131,7 @@ export default function HomePage() {
                   content: "''",
                   bg: "#2AA5EA",
                   color: "cyan.600",
-                  borderTop: "5px solid",
+                  borderTop: "4px solid",
                   borderBottom: "10px solid",
                   borderLeft: "10px solid",
                   marginLeft: 2,
@@ -135,14 +140,14 @@ export default function HomePage() {
             </Flex>
 
             <Box
-              fontWeight="normal"
-              fontFamily="Saira"
-              fontSize="20px"
+              fontFamily="Outfit"
+              fontSize={{ base: "20px", lg: "24px" }}
               color="white"
               textAlign={{ base: "center", md: "center", lg: "left" }}
+              fontWeight="light"
             >
               Hi, I am{" "}
-              <Text as="span" color="cyan.600" fontWeight="semibold">
+              <Text as="span" color="cyan.600" fontWeight="medium">
                 Davi Araújo
               </Text>
               , I am Developer frontend in search of the full stack.
@@ -157,8 +162,8 @@ export default function HomePage() {
                     src="github.png"
                     alt="github"
                     boxSize={5}
-                    as={motion.img}
-                    animation={animationImage}
+                    // as={motion.img}
+                    // animation={animationImage}
                   />
                 </Link>
                 <Link
@@ -169,8 +174,8 @@ export default function HomePage() {
                     src="linkedin.png"
                     alt="linkedin"
                     boxSize={5}
-                    as={motion.img}
-                    animation={animationImage}
+                    //as={motion.img}
+                    //animation={animationImage}
                   />
                 </Link>
               </HStack>

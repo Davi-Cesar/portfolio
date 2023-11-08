@@ -12,11 +12,16 @@ export default function Document() {
         />
 
         <link
+          href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500&family=Saira:wght@300;400;500;600;700&display=swap"
+          rel="stylesheet"
+        />
+
+        <link
           href="https://fonts.googleapis.com/css2?family=Saira:wght@100;200;300;400;500;600&display=swap"
           rel="stylesheet"
         />
         <link
-          href="https://fonts.googleapis.com/css2?family=FiraCode:wght@300;400;500;600;700&display=swap"
+          href="https://fonts.googleapis.com/css2?family=FiraCode:wght@100;200;300;400;500;600;700&display=swap"
           rel="stylesheet"
         />
       </Head>

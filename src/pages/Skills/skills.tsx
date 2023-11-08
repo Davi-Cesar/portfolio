@@ -1,7 +1,6 @@
 import { Education } from "@/components/Education";
 import { SkillsExperience } from "@/components/SkillsExperience";
-import { Box, Flex, Text, HStack, keyframes } from "@chakra-ui/react";
-import { motion } from "framer-motion";
+import { Box, Flex, Text, HStack } from "@chakra-ui/react";
 
 export default function Skills() {
   return (
@@ -17,10 +16,10 @@ export default function Skills() {
         fontFamily="Saira"
         p={{
           base: "0rem",
-          md: "2rem 0rem",
-          lg: "2rem 0rem",
+          md: "4rem 0rem",
+          lg: "4rem 0rem",
         }}
-        // bg="#4a225221"
+        id="skills"
       >
         <Box w="100%" h="auto">
           <Text
@@ -29,16 +28,18 @@ export default function Skills() {
             fontSize="64px"
             fontWeight="bold"
             textAlign="justify"
+            p={{ base: "0rem 2rem", md: "0px", lg: "10px" }}
           >
             Skills
           </Text>
           <Box
             w={{ base: "100%", md: "100%", lg: "80%" }}
             h="100%"
-            p={{ base: "0", md: "0", lg: "10px 10px 10px 0px" }}
+            p={{ base: "0rem 2rem", md: "0px", lg: "1rem" }}
             fontWeight="light"
             mb="2rem"
-            opacity="80%"
+            fontFamily="Outfit"
+            color="gray.300"
           >
             <Text>
               Ao longo ultimos 5 anos aprendendo várias linguagens e
@@ -48,7 +49,7 @@ export default function Skills() {
               aplicativos Web.
             </Text>
             <Text p="2rem 0">
-              Também tenho experiencia com back-end apenas usando Spring e
+              Também tenho experiência com back-end apenas usando Spring e
               Postgres DB.
             </Text>
           </Box>
@@ -103,7 +104,6 @@ export default function Skills() {
             justifyContent="space-between"
             fontFamily="comfortaa"
             position="relative"
-            zIndex={4}
             p={{
               base: "0rem",
               md: "0rem,",
@@ -131,6 +131,11 @@ export default function Skills() {
                 <SkillsExperience
                   image="/css-3.png"
                   name="CSS"
+                  exprerience="Advanced"
+                />
+                <SkillsExperience
+                  image="/js.png"
+                  name="JS"
                   exprerience="Intermediante"
                 />
                 <SkillsExperience

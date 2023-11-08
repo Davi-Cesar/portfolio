@@ -7,25 +7,46 @@ export const theme = extendTheme({
         },
         white: {
             '50': '#e2f4ff'
+        },
+        cyan: {
+            '600': '#429aff',
+            
         }
     },
     fonts: {
-        heading: 'Comfortaa',
-        body: 'Comfortaa',
+        heading: 'Outfit',
+        body: 'Outfit',
     },
     styles: {
         global: {
+            html: {
+                scrollBehavior: "smooth",  
+            },      
             body: {
-                h: '100%',
-                fontSize: { 
-                    base: '18px', 
-                    md: '20px', 
-                    lg: '22px' 
+                
+                '&::-webkit-scrollbar':{
+                    paddingRight: '4px',
+                    width: '15px',
+                    background: '#010D13',
                 },
-                h2: '64px',
+               '&::-webkit-scrollbar-track': {
+                    background: 'transparent',      
+                },
+                
+                '&::-webkit-scrollbar-thumb':{
+                    borderRadius: '10px',
+                    background: '#2D3748',
+                    border: '3px solid #010D13',
+                },
+                h: '100%',
+                
+                fontSize: {  
+                    lg: '1.1rem' 
+                },
+                h2: '4rem',  
                 p: { base: "0 0%", md: "0 5%", lg: "0 10%" },
-                // bgGradient: 'linear(169.44deg, #1F1D2B 1.85%, rgba(65, 48, 90, 0.08) 98.72%)',
-                bg:'gray.900',
+                
+                bg:"teal.900",
                 color: 'white'
             }
         }
