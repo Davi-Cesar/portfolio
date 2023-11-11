@@ -41,7 +41,7 @@ export function Education() {
             whileHover={{ scale: 1.2, translateY: -20 }}
           >
             <Image
-              src="/education/ufrn.png"
+              src="public/education/ufrn.png"
               alt="ufrn logo"
               objectFit="contain"
             />
@@ -57,7 +57,7 @@ export function Education() {
             whileHover={{ scale: 1.2, translateY: -20 }}
           >
             <Image
-              src="/education/imd.png"
+              src="public/education/imd.png"
               alt="ufrn logo"
               objectFit="contain"
             />
