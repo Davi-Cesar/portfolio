@@ -58,7 +58,7 @@ export function Education() {
           >
             <Image
               src="/education/imd.png"
-              alt="ufrn logo"
+              alt="imd logo"
               objectFit="contain"
             />
           </Flex>

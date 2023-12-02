@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import hljs from "highlight.js/lib/core";
 import javascript from "highlight.js/lib/languages/javascript";
-import { Box, Flex } from "@chakra-ui/react";
+import { Flex } from "@chakra-ui/react";
 
 interface CodeHighlighterProps {
   code: string;
