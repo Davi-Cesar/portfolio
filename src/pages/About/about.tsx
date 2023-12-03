@@ -77,7 +77,7 @@ export default function About() {
                   <Text>24 years old</Text>
                 </Box>
                 <Flex>
-                  <Image src="/marker.svg" alt="marker" p="5px" />
+                  <Image src="./marker.svg" alt="marker" p="5px" />
                   <Text color="gray.400">Natal, RN, Brasil</Text>
                 </Flex>
                 <Box textAlign="justify" color="gray.400">
