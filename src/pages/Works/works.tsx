@@ -20,7 +20,6 @@ export default function Works() {
           position="-webkit-sticky"
         >
           <Box
-            background="red"
             position="sticky"
             padding="4rem 1rem"
             top="0"
