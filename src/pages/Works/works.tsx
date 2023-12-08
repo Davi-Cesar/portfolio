@@ -2,6 +2,8 @@ import { WorkItem } from "@/components/WorkItem";
 import { Box, Text, Grid, GridItem } from "@chakra-ui/react";
 
 export default function Works() {
+  var boxElemente = document.getElementById("boxElement");
+
   return (
     <>
       <Grid
@@ -19,14 +21,16 @@ export default function Works() {
           justifySelf="center"
           position="-webkit-sticky"
         >
-          <Box // Ball Dark
+          <Box
+            background="red"
             position="sticky"
-            padding="2rem"
+            padding="4rem 1rem"
             top="0"
             left="0"
             borderRadius="100%"
             display="flex"
             textAlign="center"
+            id="boxElement"
           >
             <Box
               as="h2"
@@ -60,11 +64,9 @@ export default function Works() {
         />
         <WorkItem
           number={2}
-          image={"postocerto.png"}
+          image={"alinnydavi.png"}
           name={"Alinny e Davi"}
-          text={
-            ""
-          }
+          text={"Site oficial do meu casamento"}
           link={"https://alinny-davi.vercel.app/"}
         />
         <WorkItem

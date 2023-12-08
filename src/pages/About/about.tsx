@@ -90,9 +90,9 @@ export default function About() {
                     }}
                     p="2rem"
                   >
-                    I am a computer technician for the internet and graduated in
-                    Information Technology with an emphasis on Software
-                    engineering, I work as a Front-End Developer.
+                    I am a computer technician for the internet, graduated in
+                    Information Technology and studying with an emphasis on
+                    Software Engineering, I work as a Front-End Developer.
                   </Text>
                 </Box>
               </Box>
