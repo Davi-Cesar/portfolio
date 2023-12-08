@@ -2,8 +2,6 @@ import { WorkItem } from "@/components/WorkItem";
 import { Box, Text, Grid, GridItem } from "@chakra-ui/react";
 
 export default function Works() {
-  var boxElemente = document.getElementById("boxElement");
-
   return (
     <>
       <Grid
