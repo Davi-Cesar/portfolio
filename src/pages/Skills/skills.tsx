@@ -42,15 +42,13 @@ export default function Skills() {
             color="gray.300"
           >
             <Text>
-              Ao longo ultimos 5 anos aprendendo várias linguagens e
-              desenvolvendo alguns projetos, com o objetivo de se me tornar um
-              desenvolvedor Fullstack. A principal área da minha atuação é no
-              desenvolvimento front-end, HTML, CSS, JS, TS, na criação de
-              aplicativos Web.
+              Over the last 5 years learning several languages ​​and developing
+              some projects, with the goal of becoming a Fullstack developer.
+              The main area of ​​my work is front-end development, HTML, CSS,
+              JS, TS, creating Web applications.
             </Text>
             <Text p="2rem 0">
-              Também tenho experiência com back-end apenas usando Spring e
-              Postgres DB.
+              I have experience with back-end using Spring and Postgres DB.
             </Text>
           </Box>
         </Box>
@@ -98,7 +96,8 @@ export default function Skills() {
             align="center"
             justify="center"
             bgGradient="linear(169.44deg, rgba(58, 129, 191, 0.034) 1.85%, rgba(65, 48, 90, 0.08) 98.72%)"
-            border="2px solid #03365814"
+            border="1px solid #03365814"
+            borderRadius="100px 0 100px 0"
             backdropFilter="auto"
             backdropBlur="60px"
             justifyContent="space-between"

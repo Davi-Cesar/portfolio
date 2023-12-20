@@ -54,23 +54,23 @@ export default function Works() {
         </GridItem>
         <WorkItem
           number={1}
-          image={"cecane.png"}
-          name={"CECANE"}
-          text={"Implementação do Site oficial do CECANE/UFRN."}
-          link={"https://cecane.ccs.ufrn.br/"}
+          image={"alinnydavi.png"}
+          name={"Alinny e Davi"}
+          text={"My wedding official website."}
+          link={"https://alinny-davi.vercel.app/"}
         />
         <WorkItem
           number={2}
-          image={"alinnydavi.png"}
-          name={"Alinny e Davi"}
-          text={"Site oficial do meu casamento"}
-          link={"https://alinny-davi.vercel.app/"}
+          image={"cecane.png"}
+          name={"CECANE"}
+          text={"Implementation of the official CECANE/UFRN website."}
+          link={"https://cecane.ccs.ufrn.br/"}
         />
         <WorkItem
           number={3}
           image={"worldtrip.png"}
           name={"worldtrip"}
-          text={"Implementação de um site de viagens."}
+          text={"Implementation of a travel website."}
           link={"https://github.com/Davi-Cesar/worldtrip"}
         />
         <WorkItem
@@ -78,7 +78,7 @@ export default function Works() {
           image={"easyscrum.png"}
           name={"Easy Scrum"}
           text={
-            "Aplicativo para gestão de equipes de projeto, aplicando os conceitos do Scrum."
+            "Application for managing project teams, applying Scrum concepts."
           }
           link={"https://github.com/Kathamala/easy_scrum"}
         />

@@ -150,7 +150,7 @@ export default function HomePage() {
               <Text as="span" color="cyan.600" fontWeight="medium">
                 Davi Araújo
               </Text>
-              , I am Developer frontend in search of the full stack.
+              , I am frontend developer in search of the full stack.
               <HStack
                 spacing="12px"
                 m="2rem auto"

@@ -78,7 +78,7 @@ export function WorkItem({ link, number, image, name, text }: WorkProps) {
                 _hover={{ letterSpacing: "5px" }}
                 transition="letter-spacing 1s ease"
               >
-                View
+                View more
               </Text>
             </Link>
           </Flex>
