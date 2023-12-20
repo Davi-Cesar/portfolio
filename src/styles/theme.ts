@@ -43,7 +43,7 @@ export const theme = extendTheme({
                 fontSize: {  
                     lg: '1.1rem' 
                 },
-                h2: '4rem',  
+               
                 p: { base: "0 0%", md: "0 5%", lg: "0 10%" },
                 
                 bg:"teal.900",
