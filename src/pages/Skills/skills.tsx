@@ -43,9 +43,9 @@ export default function Skills() {
           >
             <Text>
               Over the last 5 years learning several languages ​​and developing
-              some projects, with the goal of becoming a Fullstack developer.
-              The main area of ​​my work is front-end development, HTML, CSS,
-              JS, TS, creating Web applications.
+              some personal and college projects, with the aim of becoming a
+              Fullstack developer. The main area of ​​my work is front-end
+              development, HTML, CSS, JS, TS, creating Web applications.
             </Text>
             <Text p="2rem 0">
               I have experience with back-end using Spring and Postgres DB.
