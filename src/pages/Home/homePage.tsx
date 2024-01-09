@@ -1,10 +1,11 @@
-import React, { useState } from "react";
+import React from "react";
 import { Box, Flex, HStack, Image, Text, keyframes } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 
 import { CodeHighlighter } from "@/components/CodeHighlighter";
 import { Typewriter } from "@/components/Typewriter";
 import Link from "next/link";
+import { Connections } from "@/components/Connections";
 
 export default function HomePage() {
   const animationKeyframesbluelight = keyframes`    
@@ -15,9 +16,9 @@ export default function HomePage() {
     100%  {transform:  translateX(150px)      translateY(50px)         } 
   `;
   const animationKeyframesblue = keyframes`
-    0%    {transform:  translateX(150px)      translateY(150px)          }
-    50%   {transform:  translateX(-200px)     translateY(-150px)         } 
-    100%  {transform:  translateX(150px)      translateY(150px)          } 
+    0%    {transform:  translateX(120px)      translateY(120px)          }
+    50%   {transform:  translateX(-120px)     translateY(-150px)         } 
+    100%  {transform:  translateX(120px)      translateY(120px)          } 
   `;
   const animationPonteirokeyframes = keyframes`
     0%    {opacity: 100%  }      
@@ -34,7 +35,7 @@ export default function HomePage() {
   const animationPonteiro = `${animationPonteirokeyframes} 2s ease-in-out  infinite`;
   const animationImage = `${animationImagekeyframes} 5s ease-in-out  infinite`;
 
-  let code = `
+  const code = `
     import React from 'react';
     function  App() {
           <div>
@@ -52,7 +53,6 @@ export default function HomePage() {
         align="center"
         p="2rem 0rem"
         id="home"
-        //bgGradient="linear(60deg, #012941 0%, teal.900 50%)"
       >
         <Flex
           w={{ base: "10%", md: "10%", lg: "50%" }}
@@ -61,7 +61,8 @@ export default function HomePage() {
           align="center"
         >
           <Box
-            bgColor="rgba(3, 9, 23, 0.055)"
+            borderRadius="100px 0 100px 0"
+            bgColor="rgba(3, 9, 23, 0.096)"
             backdropFilter="auto"
             backdropBlur="30px"
             w={{ base: "100vw", md: "400px", lg: "400px" }}
@@ -112,10 +113,9 @@ export default function HomePage() {
             <Image
               as={motion.img}
               animation={animationImage}
-              //borderRadius="100%"
               boxSize="220px"
               borderRadius="full"
-              boxShadow="0 0 30px #000000"
+              boxShadow="0 0 30px #021831"
               src="./perfil.jpg"
               alt="Davi César"
               objectFit="cover"
@@ -158,25 +158,19 @@ export default function HomePage() {
                 justify={{ base: "center", md: "center", lg: "left" }}
               >
                 <Link href="https://github.com/Davi-Cesar" target="_black">
-                  <Image
-                    src="github.png"
-                    alt="github"
-                    boxSize={5}
-                    // as={motion.img}
-                    // animation={animationImage}
-                  />
+                  <Image src="github.png" alt="github" boxSize={5} />
                 </Link>
                 <Link
                   href="https://www.linkedin.com/in/davi-c%C3%A9sar-740700166/"
                   target="_black"
                 >
-                  <Image
-                    src="linkedin.png"
-                    alt="linkedin"
-                    boxSize={5}
-                    //as={motion.img}
-                    //animation={animationImage}
-                  />
+                  <Image src="linkedin.png" alt="linkedin" boxSize={5} />
+                </Link>
+                <Link href="/resume.pdf" target="_black">
+                  <Box fontSize="1rem">
+                    Resume
+                    {/* <Connections connection={"Resume"} link="/resume.pdf" /> */}
+                  </Box>
                 </Link>
               </HStack>
             </Box>

@@ -121,10 +121,7 @@ export default function About() {
                 connection={"My Linkedin"}
                 link="https://www.linkedin.com/in/davi-c%C3%A9sar-740700166/"
               />
-              <Connections
-                connection={"Resume.pdf"}
-                link="https://www.linkedin.com/in/davi-c%C3%A9sar-740700166/"
-              />
+              <Connections connection={"Resume.pdf"} link="/resume.pdf" />
             </Flex>
           </Flex>
         </Box>

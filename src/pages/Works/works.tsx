@@ -46,8 +46,8 @@ export default function Works() {
                 color="gray.500"
                 textAlign="left"
               >
-                During my training at IMD participated in some projects. See
-                some of them:
+                During my formation at IMD - UFRN participated in some projects.
+                See some of them:
               </Text>
             </Box>
           </Box>
