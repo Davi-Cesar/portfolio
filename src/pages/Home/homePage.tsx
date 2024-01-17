@@ -148,7 +148,7 @@ export default function HomePage() {
             >
               Hi, I am{" "}
               <Text as="span" color="cyan.600" fontWeight="medium">
-                Davi Araújo
+                Davi César
               </Text>
               , I am frontend developer in search of the full stack.
               <HStack
