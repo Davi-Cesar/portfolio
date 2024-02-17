@@ -15,7 +15,7 @@ export function Institution({ name }: InstitutionProps) {
       bgGradient="linear(169.44deg, rgba(58, 129, 191, 0.034) 1.85%, rgba(65, 48, 90, 0.08) 98.72%)"
       borderRadius="10px"
       p="1rem"
-      margin=".2rem"
+      margin=".5rem"
     >
       <Box
         boxSize="50px"
@@ -37,7 +37,7 @@ export function Institution({ name }: InstitutionProps) {
         fontWeight="regular"
         w="60%"
         textAlign="center"
-        fontSize="22px"
+        fontSize="18px"
         textTransform="uppercase"
       >
         {name}

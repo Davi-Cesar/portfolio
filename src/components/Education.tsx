@@ -17,8 +17,7 @@ export function Education() {
         align="center"
         justify="space-evenly"
         p="2rem"
-        m="2rem 0"
-        zIndex="4"
+        direction={{ base: "column", lg: "row" }}
       >
         <Institution name="ufrn" />
         <Institution name="cod3r" />
