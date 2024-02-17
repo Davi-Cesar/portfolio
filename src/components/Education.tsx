@@ -1,5 +1,5 @@
-import { Text, Flex, Image, Box } from "@chakra-ui/react";
-import { motion } from "framer-motion";
+import { Flex } from "@chakra-ui/react";
+
 import { Institution } from "./Institution";
 
 export function Education() {

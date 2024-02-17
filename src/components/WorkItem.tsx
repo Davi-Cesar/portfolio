@@ -39,7 +39,11 @@ export function WorkItem({ link, number, image, name, text, work }: WorkProps) {
     >
       <Grid
         display="grid"
-        templateColumns="5% repeat(3, 1fr) 40%"
+        templateColumns={{
+          base: "1fr",
+          md: "1fr",
+          lg: "5% repeat(3, 1fr) 40%",
+        }}
         gap="10px"
         justifyItems="center"
         alignItems="center"
