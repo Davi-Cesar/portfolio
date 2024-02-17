@@ -141,7 +141,7 @@ export default function HomePage() {
 
             <Box
               fontFamily="Outfit"
-              fontSize={{ base: "20px", lg: "24px" }}
+              fontSize={{ base: "18px", lg: "22px" }}
               color="white"
               textAlign={{ base: "center", md: "center", lg: "left" }}
               fontWeight="light"

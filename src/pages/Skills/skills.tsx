@@ -100,7 +100,6 @@ export default function Skills() {
             borderRadius="100px 0 100px 0"
             backdropFilter="auto"
             backdropBlur="60px"
-            justifyContent="space-between"
             fontFamily="comfortaa"
             position="relative"
             p={{

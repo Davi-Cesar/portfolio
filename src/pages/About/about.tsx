@@ -1,6 +1,6 @@
 import { Connections } from "@/components/Connections";
-import { Box, Text, Flex, chakra, Image, keyframes } from "@chakra-ui/react";
-import { isValidMotionProp, motion } from "framer-motion";
+import { Box, Text, Flex, Image, keyframes } from "@chakra-ui/react";
+import { motion } from "framer-motion";
 
 export default function About() {
   const animationCirculokeyframes = keyframes`
@@ -105,10 +105,10 @@ export default function About() {
               align="center"
               justifyContent="center"
               textAlign="center"
-              fontSize={{ base: "28px", lg: "32px" }}
+              fontSize={{ base: "18px", lg: "28px" }}
               padding={{ base: "auto", lg: "2rem" }}
             >
-              <Text color="cyan.500" p="2rem">
+              <Text color="cyan.600" p="2rem">
                 Keep in touch
               </Text>
 

@@ -26,8 +26,8 @@ export default function Works() {
             <Text
               fontFamily="Outfit"
               fontWeight="normal"
-              fontSize="16px"
-              color="gray.500"
+              fontSize="1.1rem"
+              color="gray.400"
               textAlign="left"
             >
               During my formation at IMD - UFRN participated in some projects.
