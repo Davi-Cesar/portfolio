@@ -19,11 +19,6 @@ export function Education() {
         p="2rem"
         m="2rem 0"
         zIndex="4"
-        direction={{
-          base: "column",
-          md: "column",
-          lg: "row",
-        }}
       >
         <Institution name="ufrn" />
         <Institution name="cod3r" />
