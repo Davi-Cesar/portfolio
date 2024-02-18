@@ -21,6 +21,7 @@ export default function Works() {
             fontWeight="bold"
             textAlign="justify"
             color="cyan.600"
+            p={{ base: "0rem 2rem", md: "0px", lg: "10px" }}
           >
             Works
             <Text
@@ -39,7 +40,7 @@ export default function Works() {
         <WorkItem
           number={1}
           image={"casamento.svg"}
-          name={"Alinny e Davi"}
+          name={"Alinny & Davi"}
           work="Design e Desenvolvimento"
           text={"Wedding Site Event"}
           link={"https://alinny-davi.vercel.app/"}

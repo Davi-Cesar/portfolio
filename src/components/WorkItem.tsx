@@ -3,14 +3,11 @@ import {
   Box,
   Image,
   Text,
-  useBreakpointValue,
-  useMediaQuery,
   Grid,
+  useMediaQuery,
 } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 
-import Link from "next/link";
-import { useState } from "react";
 interface WorkProps {
   image: string;
   name: string;
@@ -19,14 +16,14 @@ interface WorkProps {
   link: string;
   work: string;
 }
-
 export function WorkItem({ link, number, image, name, text, work }: WorkProps) {
+  const [isLargerThan1280] = useMediaQuery("(min-width: 780px)");
   return (
     <GridItem
       as={motion.div}
-      h="250px"
+      h={{ base: "400px", md: "250px" }}
       w="100%"
-      bgColor="rgba(3, 9, 23, 0.055)"
+      bgColor="rgba(47, 109, 255, 0.055)"
       border="2px solid rgba(95, 95, 95, 0.075)"
       justifySelf="center"
       bgSize="cover"
@@ -41,7 +38,6 @@ export function WorkItem({ link, number, image, name, text, work }: WorkProps) {
         display="grid"
         templateColumns={{
           base: "1fr",
-          md: "1fr",
           lg: "5% repeat(3, 1fr) 40%",
         }}
         gap="10px"
@@ -49,8 +45,9 @@ export function WorkItem({ link, number, image, name, text, work }: WorkProps) {
         alignItems="center"
         w="100%"
         h="100%"
+        p={{ base: "0rem 2rem", md: "0px", lg: "0" }}
       >
-        <Text fontSize="40px" color="gray.700">
+        <Text fontSize="40px" color="gray.700" textAlign="left">
           {number}
         </Text>
         <Text fontSize="25px">{name}</Text>
@@ -64,7 +61,6 @@ export function WorkItem({ link, number, image, name, text, work }: WorkProps) {
           boxSize="100%"
           overflow="hidden"
           position="relative"
-          bg="red.100"
           display="flex"
           justifyContent="center"
           alignItems="center"
@@ -89,6 +85,7 @@ export function WorkItem({ link, number, image, name, text, work }: WorkProps) {
             opacity="70%"
             borderRadius="100%"
             className="ballView"
+            zIndex={isLargerThan1280 ? "0" : "1"}
             cursor="pointer"
             transition="transform 2s ease"
           >
@@ -105,13 +102,13 @@ export function WorkItem({ link, number, image, name, text, work }: WorkProps) {
           </Box>
 
           <Image
-            src={`works/${image}`}
+            src={isLargerThan1280 ? `works/${image}` : "transparent"}
             alt={name}
             boxSize="100%"
             objectFit="cover"
             objectPosition="cover"
             className="imgWork"
-            filter="blur(0px)"
+            filter={isLargerThan1280 ? "blur(0px)" : "blur(1px)"}
             transition="0.5s ease"
             _hover={{
               ".imgWork": {
