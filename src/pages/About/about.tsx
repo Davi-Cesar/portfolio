@@ -23,21 +23,11 @@ export default function About() {
           backdropSaturate="100%"
           zIndex="2"
         >
-          <Text
-            as="h2"
-            color="cyan.600"
-            fontSize="50px"
-            fontWeight="bold"
-            textAlign="justify"
-            p={{ base: "2rem", md: "2rem 10px", lg: "1rem 2rem" }}
-          >
-            About Me
-          </Text>
           <Flex
             h={{ base: "100%", md: "100%", lg: `calc(100vh - 5rem)` }}
             justify="center"
             align="center"
-            p="2rem 0rem"
+            p=" 0rem"
             direction={{
               base: "column",
               md: "column",
@@ -61,6 +51,17 @@ export default function About() {
                 justifyContent="center"
                 flexDirection="column"
               >
+                <Text
+                  as="h2"
+                  color="cyan.600"
+                  fontSize="32px"
+                  fontWeight="regular"
+                  textAlign="left"
+                  w="100%"
+                  p={{ base: "2rem", md: "2rem 10px", lg: "1rem 2rem" }}
+                >
+                  About Me
+                </Text>
                 <Image
                   as={motion.img}
                   // borderRadius="100%"

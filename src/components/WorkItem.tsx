@@ -21,7 +21,7 @@ export function WorkItem({ link, number, image, name, text, work }: WorkProps) {
   return (
     <GridItem
       as={motion.div}
-      h={{ base: "400px", md: "250px" }}
+      h="300px"
       w="100%"
       bgColor="rgba(47, 109, 255, 0.055)"
       border="2px solid rgba(95, 95, 95, 0.075)"
@@ -38,14 +38,14 @@ export function WorkItem({ link, number, image, name, text, work }: WorkProps) {
         display="grid"
         templateColumns={{
           base: "1fr",
+          md: " 5% repeat(3, 1fr) 30%",
           lg: "5% repeat(3, 1fr) 40%",
         }}
-        gap="10px"
+        gap={{ base: "5px", lg: "10px" }}
         justifyItems="center"
         alignItems="center"
         w="100%"
         h="100%"
-        p={{ base: "0rem 2rem", md: "0px", lg: "0" }}
       >
         <Text fontSize="40px" color="gray.700" textAlign="left">
           {number}
@@ -102,14 +102,15 @@ export function WorkItem({ link, number, image, name, text, work }: WorkProps) {
           </Box>
 
           <Image
-            src={isLargerThan1280 ? `works/${image}` : "transparent"}
+            src={`works/${image}`}
             alt={name}
-            boxSize="100%"
+            boxSize={isLargerThan1280 ? "100%" : "100px"}
             objectFit="cover"
             objectPosition="cover"
             className="imgWork"
             filter={isLargerThan1280 ? "blur(0px)" : "blur(1px)"}
             transition="0.5s ease"
+            opacity={isLargerThan1280 ? 1 : 0}
             _hover={{
               ".imgWork": {
                 filter: "blur(1px)",

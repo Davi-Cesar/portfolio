@@ -114,7 +114,7 @@ export default function HomePage() {
               as={motion.img}
               animation={animationImage}
               boxSize="220px"
-              borderRadius="full"
+              borderRadius="100%"
               boxShadow="0 0 30px #021831"
               src="./perfil.jpg"
               alt="Davi César"
