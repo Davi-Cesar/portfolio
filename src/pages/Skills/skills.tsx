@@ -208,6 +208,11 @@ export default function Skills() {
                     name="Spring"
                     exprerience="Basic"
                   />
+                  <SkillsExperience
+                    image="/nodejs.webp"
+                    name="Node.js"
+                    exprerience="Basic"
+                  />
                 </HStack>
               </Box>
             </Box>

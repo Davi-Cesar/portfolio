@@ -5,6 +5,9 @@ import {
   Text,
   Grid,
   useMediaQuery,
+  Flex,
+  HStack,
+  Stack,
 } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 
@@ -51,9 +54,11 @@ export function WorkItem({ link, number, image, name, text, work }: WorkProps) {
           {number}
         </Text>
         <Text fontSize="25px">{name}</Text>
-        <Text textAlign="center" fontWeight="light" color="gray.400">
-          {text}
-        </Text>
+        <Stack direction="column">
+          <Text textAlign="center" fontWeight="light" color="gray.400">
+            {text}
+          </Text>
+        </Stack>
         <Text textAlign="center" fontWeight="light" color="gray.400">
           {work}
         </Text>
