@@ -1,225 +1,109 @@
 import { Education } from "@/components/Education";
-import { SkillsExperience } from "@/components/SkillsExperience";
-import { Box, Flex, Text, HStack } from "@chakra-ui/react";
+import { InfiniteLoop } from "@/components/InfiniteLoopSlider";
+
+import { Box, Flex, Text } from "@chakra-ui/react";
+import { skillsSliceOne, skillsSliceTwo } from "../services/skills";
+import { ContainerScrollIfinite } from "@/components/ContainerScrollIfinite";
 
 export default function Skills() {
   return (
-    <>
-      <Flex
-        h="100%"
-        w={{
-          base: "100vw",
-          md: "100%",
-          lg: "100%",
-        }}
-        display="column"
-        fontFamily="Saira"
-        p={{
-          base: "0rem",
-          md: "4rem 0rem",
-          lg: "4rem 0rem",
-        }}
-        id="skills"
-      >
-        <Box w="100%" h="auto">
-          <Text
-            as="h2"
-            color="cyan.600"
-            fontSize="64px"
-            fontWeight="bold"
-            textAlign="justify"
-            p={{ base: "0rem 2rem", md: "0px", lg: "10px" }}
-          >
-            Skills
-          </Text>
-          <Box
-            w={{ base: "100%", md: "100%", lg: "80%" }}
-            h="100%"
-            p={{ base: "0rem 2rem", md: "0px", lg: "1rem" }}
-            fontWeight="light"
-            mb="2rem"
-            fontFamily="Outfit"
-            color="gray.300"
-          >
-            <Text>
-              Over the last 5 years learning several languages ​​and developing
-              some personal and college projects, with the aim of becoming a
-              Fullstack developer. The main area of ​​my work is front-end
-              development, HTML, CSS, JS, TS, creating Web applications.
-            </Text>
-            <Text p="2rem 0">
-              I have experience with back-end using Spring and Postgres DB.
-            </Text>
-          </Box>
-        </Box>
-
-        <Flex
-          w="100%"
+    <Flex
+      h="100%"
+      w="100%"
+      display="column"
+      fontFamily="Saira"
+      p={{
+        base: "0rem",
+        lg: "4rem 0rem",
+      }}
+      id="skills"
+    >
+      <Box w="100%">
+        <Text as="h2" color="cyan.600" fontWeight="bold" textAlign="justify">
+          Skills
+        </Text>
+        <Box
+          w={{ md: "100%", lg: "80%" }}
           h="100%"
-          justifyContent="space-between"
-          fontFamily="comfortaa"
-          position="relative"
-          _before={{
-            content: "''",
-            position: "absolute",
-            width: "10rem",
-            height: "10rem",
-            left: "0",
-            top: "0",
-            right: "0",
-            bottom: "0",
-            filter: "blur(90px)",
-            bg: "#663bffc9",
-            zIndex: 2,
-          }}
-          _after={{
-            content: "''",
-            position: "absolute",
-            width: "10rem",
-            height: "10rem",
-            left: "auto",
-            right: "0",
-            bottom: "0",
-            filter: "blur(90px)",
-            bg: "#059bffc7",
-            zIndex: 2,
-          }}
+          p={{ base: "0rem 2rem", md: "0px", lg: "1rem" }}
+          fontWeight="light"
+          mb="2rem"
+          fontFamily="Outfit"
+          color="gray.300"
         >
-          <Flex
-            w="100%"
-            h="100%"
-            direction={{
-              base: "column",
-              md: "column",
-              lg: "row",
-            }}
-            align="center"
-            justify="center"
-            bgGradient="linear(169.44deg, rgba(58, 129, 191, 0.034) 1.85%, rgba(65, 48, 90, 0.08) 98.72%)"
-            border="1px solid #03365814"
-            borderRadius="100px 0 100px 0"
-            backdropFilter="auto"
-            backdropBlur="60px"
-            fontFamily="comfortaa"
-            position="relative"
-            p={{
-              base: "0rem",
-              md: "0rem,",
-              lg: "4rem",
-            }}
-          >
-            <Box h="100%" w="100%">
-              <Flex h="10%" align="center" justify="center" p="2rem">
-                <Text fontSize="18px">{"{ }"} Frontend Developer</Text>
-              </Flex>
-              <HStack
-                direction={{
-                  base: "column",
-                  md: "column",
-                  lg: "row",
-                }}
-                flexWrap="wrap"
-                justify="center"
-              >
-                <SkillsExperience
-                  image="/html.png"
-                  name="HTML"
-                  exprerience="Advanced"
-                />
-                <SkillsExperience
-                  image="/css-3.png"
-                  name="CSS"
-                  exprerience="Advanced"
-                />
-                <SkillsExperience
-                  image="/js.png"
-                  name="JS"
-                  exprerience="Intermediante"
-                />
-                <SkillsExperience
-                  image="/typescript.png"
-                  name="Typescript"
-                  exprerience="Intermediante"
-                />
-                <SkillsExperience
-                  image="/java.png"
-                  name="Java"
-                  exprerience="Intermediante"
-                />
-                <SkillsExperience
-                  image="/react.png"
-                  name="React"
-                  exprerience="Intermediante"
-                />
-                <SkillsExperience
-                  image="/git.png"
-                  name="Git"
-                  exprerience="Basic"
-                />
-                <SkillsExperience
-                  image="/chakra-ui.png"
-                  name="Chakra"
-                  exprerience="Intermediante"
-                />
-              </HStack>
-            </Box>
-
-            <Box h="100%" w="100%">
-              <Flex h="10%" align="center" justify="center" p="2rem">
-                <Text fontSize="18px">{"."} Web Designer</Text>
-              </Flex>
-              <HStack
-                direction={{
-                  base: "column",
-                  md: "column",
-                  lg: "row",
-                }}
-                flexWrap="wrap"
-                justify="center"
-              >
-                <SkillsExperience
-                  image="/figma.png"
-                  name="Figma"
-                  exprerience="Intermediante"
-                />
-                <SkillsExperience
-                  image="/photoshop.png"
-                  name="Photoshop"
-                  exprerience="Intermediante"
-                />
-                <SkillsExperience
-                  image="/illustrator.png"
-                  name="Illustrator"
-                  exprerience="Basic"
-                />
-              </HStack>
-              <Box h="100%" w="100%">
-                <Flex h="15%" align="center" justify="center" p="2rem">
-                  <Text fontSize="18px">{"</>"} Backend Developer</Text>
-                </Flex>
-                <HStack p="32px" flexWrap="wrap" justify="center">
-                  <SkillsExperience
-                    image="/postgres.png"
-                    name="Postgres"
-                    exprerience="Basic"
-                  />
-                  <SkillsExperience
-                    image="/spring.png"
-                    name="Spring"
-                    exprerience="Basic"
-                  />
-                  <SkillsExperience
-                    image="/nodejs.webp"
-                    name="Node.js"
-                    exprerience="Basic"
-                  />
-                </HStack>
-              </Box>
-            </Box>
-          </Flex>
-        </Flex>
-        <Education />
+          <Text>
+            Over the last 5 years learning several languages ​​and developing
+            some personal and college projects, with the aim of becoming a
+            Fullstack developer. The main area of ​​my work is front-end
+            development, HTML, CSS, JS, TS, creating Web applications.
+          </Text>
+          <Text p="2rem 0">
+            I have experience with back-end using Spring and Postgres DB.
+          </Text>
+        </Box>
+      </Box>
+      <Flex
+        w="100%"
+        h="100%"
+        justifyContent="center"
+        fontFamily="comfortaa"
+        alignItems="center"
+        flexDirection="column"
+        position="relative"
+        bgGradient="linear(169.44deg, rgba(58, 129, 191, 0.034) 1.85%, rgba(65, 48, 90, 0.08) 98.72%)"
+        border="1px solid #03365814"
+        borderRadius={{ base: "10px", lg: "100px 0 100px 0" }}
+        backdropFilter="auto"
+        backdropBlur="60px"
+        _before={{
+          content: "''",
+          position: "absolute",
+          width: "5rem",
+          height: "5rem",
+          left: "0",
+          top: "0",
+          right: "0",
+          bottom: "0",
+          filter: "blur(90px)",
+          bg: "#663bffc9",
+          zIndex: 2,
+        }}
+        _after={{
+          content: "''",
+          position: "absolute",
+          width: "5rem",
+          height: "5rem",
+          left: "auto",
+          right: "0",
+          bottom: "0",
+          filter: "blur(90px)",
+          bg: "#059bffc7",
+          zIndex: 2,
+        }}
+      >
+        <ContainerScrollIfinite>
+          <InfiniteLoop
+            reverse={false}
+            speed={"18s"}
+            listSkills={skillsSliceOne}
+          />
+        </ContainerScrollIfinite>
+        <ContainerScrollIfinite>
+          <InfiniteLoop
+            reverse={true}
+            speed={"27s"}
+            listSkills={skillsSliceTwo}
+          />
+        </ContainerScrollIfinite>
+        <ContainerScrollIfinite>
+          <InfiniteLoop
+            reverse={false}
+            speed={"40s"}
+            listSkills={skillsSliceOne.concat(skillsSliceTwo)}
+          />
+        </ContainerScrollIfinite>
       </Flex>
-    </>
+      <Education />
+    </Flex>
   );
 }

@@ -29,7 +29,6 @@ export default function About() {
             align="center"
             p=" 0rem"
             direction={{
-              base: "column",
               md: "column",
               lg: "row",
             }}
@@ -78,7 +77,6 @@ export default function About() {
                   <Text>24 years old</Text>
                 </Box>
                 <Flex>
-                  <Image src="./marker.svg" alt="marker" p="5px" />
                   <Text color="gray.400">Natal, RN, Brasil</Text>
                 </Flex>
                 <Box textAlign="justify" color="gray.400">
@@ -86,7 +84,6 @@ export default function About() {
                     fontSize="1rem"
                     w={{
                       base: "auto",
-                      md: "450px",
                       lg: "450px",
                     }}
                     p="2rem"

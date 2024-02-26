@@ -9,8 +9,7 @@ export const theme = extendTheme({
             '50': '#e2f4ff'
         },
         cyan: {
-            '600': '#429aff',
-            
+            '600': '#429aff', 
         }
     },
     fonts: {
@@ -39,7 +38,11 @@ export const theme = extendTheme({
                     border: '3px solid #010D13',
                 },
                 h: '100%',
-                
+                h2: {
+                    fontSize: '40px',
+                    
+                    p: { base: "0rem 2rem", md: "0px", lg: "10px" }
+                },
                 fontSize: {  
                     lg: '1.1rem' 
                 },

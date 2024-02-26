@@ -1,4 +1,4 @@
-import { Box, Flex, HStack } from "@chakra-ui/react";
+import { Flex, HStack } from "@chakra-ui/react";
 
 import { useEffect, useState } from "react";
 import { ActiveLink } from "./ActiveLink";
@@ -41,7 +41,7 @@ export function Header() {
           <ActiveLink name="about" active />
         </>
       );
-    } else if (scrollingValue > 1800 && scrollingValue <= 3500) {
+    } else if (scrollingValue > 1800 && scrollingValue <= 3000) {
       return (
         <>
           <ActiveLink name="home" active />
@@ -50,7 +50,7 @@ export function Header() {
           <ActiveLink name="about" active />
         </>
       );
-    } else if (scrollingValue > 3500) {
+    } else if (scrollingValue > 3000) {
       return (
         <>
           <ActiveLink name="home" active />

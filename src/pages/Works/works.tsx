@@ -15,9 +15,7 @@ export default function Works() {
         >
           <Box
             as="h2"
-            top="10px"
             fontFamily="Saira"
-            fontSize="50px"
             fontWeight="bold"
             textAlign="justify"
             color="cyan.600"

@@ -1,36 +1,35 @@
-import { Box, Flex, Image, Text, HStack, keyframes } from "@chakra-ui/react";
+import { Box, Flex, Image, Text } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 
 interface SkillProps {
   image: string;
   name: string;
-  exprerience: string;
 }
 
-export function SkillsExperience({ image, name, exprerience }: SkillProps) {
+export function SkillsExperience({ image, name }: SkillProps) {
   return (
     <Flex
       as={motion.div}
+      display="inline-flex"
       direction="column"
-      w="150px"
+      w="120px"
+      m=".6rem"
       align="center"
       justify="center"
-      p={{ base: "0rem", md: "1rem", lg: "1rem" }}
+      paddingBlock="2rem"
       fontSize="80%"
+      transition="1s"
+      letterSpacing="0.1rem"
       whileHover={{ translateY: -20 }}
     >
       <Image
         src={`skills/${image}`}
         alt={image}
-        w={{ base: "20%", md: "30%", lg: "50%" }}
+        w={{ base: "30%", md: "30%", lg: "50%" }}
         objectFit="contain"
-        m="auto 0px "
       />
-      <Box textAlign="center" p="15px 0">
+      <Box textAlign="center" fontSize="80%" p="5px 0">
         <Text>{name}</Text>
-        <Text fontFamily="saira" opacity="50%">
-          {exprerience}
-        </Text>
       </Box>
     </Flex>
   );
