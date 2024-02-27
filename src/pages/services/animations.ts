@@ -35,11 +35,12 @@ export const code = `
           </div>
     } 
     export default App;`;
-    
-export {
+
+// eslint-disable-next-line import/no-anonymous-default-export
+export default {
   animationbluelight,
   animationblue,
   animationPonteiro,
   animationImage,
-  code as default,
+  code
 };
