@@ -5,13 +5,8 @@ import { motion } from "framer-motion";
 import { CodeHighlighter } from "@/components/CodeHighlighter";
 import { Typewriter } from "@/components/Typewriter";
 import Link from "next/link";
-import {
-  animationImage,
-  animationPonteiro,
-  animationblue,
-  animationbluelight,
-  code,
-} from "../services/animations";
+import { code } from "../services/animations";
+import animations from "../services/animations";
 
 export default function HomePage() {
   return (
@@ -64,7 +59,7 @@ export default function HomePage() {
           </Box>
           <Box // Ball Ligth
             as={motion.div}
-            animation={animationbluelight}
+            animation={animations.animationbluelight}
             position="absolute"
             padding="2"
             bg="#83defa" //#20d2d8"
@@ -77,7 +72,7 @@ export default function HomePage() {
           />
           <Box // Ball Dark
             as={motion.div}
-            animation={animationblue}
+            animation={animations.animationblue}
             position="absolute"
             padding="2"
             bg="cyan.600"
@@ -106,7 +101,7 @@ export default function HomePage() {
           <Box w="400px">
             <Image
               as={motion.img}
-              animation={animationImage}
+              animation={animations.animationImage}
               boxSize="220px"
               borderRadius="100%"
               boxShadow="0 0 30px #021831"
@@ -120,7 +115,7 @@ export default function HomePage() {
               <Typewriter develop="Developer" />
               <Box
                 as={motion.div}
-                animation={animationPonteiro}
+                animation={animations.animationPonteiro}
                 _before={{
                   content: "''",
                   bg: "#2AA5EA",
