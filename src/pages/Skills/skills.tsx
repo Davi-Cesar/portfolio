@@ -45,6 +45,7 @@ export default function Skills() {
       <Flex
         w="100%"
         h="100%"
+        p={{ md: "0rem", lg: "4rem" }}
         justifyContent="center"
         fontFamily="comfortaa"
         alignItems="center"

@@ -1,49 +1,19 @@
 import React from "react";
-import { Box, Flex, HStack, Image, Text, keyframes } from "@chakra-ui/react";
+import { Box, Flex, HStack, Image, Text } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 
 import { CodeHighlighter } from "@/components/CodeHighlighter";
 import { Typewriter } from "@/components/Typewriter";
 import Link from "next/link";
-import { Connections } from "@/components/Connections";
+import {
+  animationImage,
+  animationPonteiro,
+  animationblue,
+  animationbluelight,
+  code,
+} from "../services/animations";
 
 export default function HomePage() {
-  const animationKeyframesbluelight = keyframes`    
-    0%    {transform:  translateX(150px)      translateY(50px)         }
-    25%   {transform:  translateX(100px)      translateY(-150px)       } 
-    50%   {transform:  translateX(-160px)     translateY(10px)         } 
-    75%   {transform:  translateX(-100px)     translateY(150px)        }
-    100%  {transform:  translateX(150px)      translateY(50px)         } 
-  `;
-  const animationKeyframesblue = keyframes`
-    0%    {transform:  translateX(120px)      translateY(120px)          }
-    50%   {transform:  translateX(-120px)     translateY(-150px)         } 
-    100%  {transform:  translateX(120px)      translateY(120px)          } 
-  `;
-  const animationPonteirokeyframes = keyframes`
-    0%    {opacity: 100%  }      
-    100%  {opacity: 0%    } 
-  `;
-  const animationImagekeyframes = keyframes`
-    0%    {transform:  translateY(0px)     }
-    50%   {transform:  translateY(10px)    }
-    100%  {transform:  translateY(0px)     }
-  `;
-
-  const animationbluelight = `${animationKeyframesbluelight} 13s ease-in-out infinite`;
-  const animationblue = `${animationKeyframesblue} 15s ease-in-out infinite`;
-  const animationPonteiro = `${animationPonteirokeyframes} 2s ease-in-out  infinite`;
-  const animationImage = `${animationImagekeyframes} 5s ease-in-out  infinite`;
-
-  const code = `
-    import React from 'react';
-    function  App() {
-          <div>
-              <h1>Hello, world!</h1>
-          </div>
-    } 
-    export default App;`;
-
   return (
     <>
       <Flex
@@ -55,17 +25,27 @@ export default function HomePage() {
         id="home"
       >
         <Flex
+          as={motion.div}
           w={{ base: "10%", md: "10%", lg: "50%" }}
           h="100%"
           justify="center"
           align="center"
+          variants={{
+            hidden: { opacity: 0, x: 500 },
+            visible: { opacity: 1, x: 0 },
+          }}
+          // bg="red"
+          // @ts-ignore no problem in operation, although type error appears.
+          transition={{ duration: 5, delay: 5 }}
+          initial="hidden"
+          animate="visible"
         >
           <Box
             borderRadius="100px 0 100px 0"
             bgColor="rgba(3, 9, 23, 0.096)"
             backdropFilter="auto"
             backdropBlur="30px"
-            w={{ base: "100vw", md: "400px", lg: "400px" }}
+            w={{ base: "100vw", lg: "400px" }}
             h={{ base: "100%", md: "400px", lg: "450px" }}
             zIndex="3"
             textAlign="justify"
@@ -108,7 +88,21 @@ export default function HomePage() {
             zIndex="2"
           />
         </Flex>
-        <Flex w="50%" h="100%" justify="center" align="center">
+        <Flex
+          as={motion.div}
+          w="50%"
+          h="100%"
+          justify="center"
+          align="center"
+          variants={{
+            hidden: { opacity: 0, x: -100 },
+            visible: { opacity: 1, x: 0 },
+          }}
+          // @ts-ignore no problem in operation, although type error appears.
+          transition={{ duration: 0.5, delay: 5 }}
+          initial="hidden"
+          animate="visible"
+        >
           <Box w="400px">
             <Image
               as={motion.img}

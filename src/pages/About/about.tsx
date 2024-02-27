@@ -29,7 +29,7 @@ export default function About() {
             align="center"
             p=" 0rem"
             direction={{
-              md: "column",
+              base: "column",
               lg: "row",
             }}
           >

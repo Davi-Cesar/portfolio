@@ -9,7 +9,7 @@ import {
   HStack,
   Stack,
 } from "@chakra-ui/react";
-import { motion } from "framer-motion";
+import { Variants, motion } from "framer-motion";
 
 interface WorkProps {
   image: string;
@@ -19,12 +19,13 @@ interface WorkProps {
   link: string;
   work: string;
 }
+
 export function WorkItem({ link, number, image, name, text, work }: WorkProps) {
   const [isLargerThan1280] = useMediaQuery("(min-width: 780px)");
   return (
     <GridItem
       as={motion.div}
-      h="300px"
+      h="350px"
       w="100%"
       bgColor="rgba(47, 109, 255, 0.055)"
       border="2px solid rgba(95, 95, 95, 0.075)"
@@ -110,7 +111,7 @@ export function WorkItem({ link, number, image, name, text, work }: WorkProps) {
             src={`works/${image}`}
             alt={name}
             boxSize={isLargerThan1280 ? "100%" : "100px"}
-            objectFit="cover"
+            objectFit="contain"
             objectPosition="cover"
             className="imgWork"
             filter={isLargerThan1280 ? "blur(0px)" : "blur(1px)"}
