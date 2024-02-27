@@ -3,7 +3,7 @@ import { InfiniteLoop } from "@/components/InfiniteLoopSlider";
 
 import { Box, Flex, Text } from "@chakra-ui/react";
 import { ContainerScrollIfinite } from "@/components/ContainerScrollIfinite";
-import skillsData from "../services/skills";
+import skillsData from "../../services/skills";
 
 export default function Skills() {
   return (

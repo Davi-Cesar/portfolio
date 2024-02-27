@@ -5,8 +5,8 @@ import { motion } from "framer-motion";
 import { CodeHighlighter } from "@/components/CodeHighlighter";
 import { Typewriter } from "@/components/Typewriter";
 import Link from "next/link";
-import { code } from "../services/animations";
-import animations from "../services/animations";
+import { code } from "../../services/animations";
+import animations from "../../services/animations";
 
 export default function HomePage() {
   return (
