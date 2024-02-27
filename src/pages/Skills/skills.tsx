@@ -2,8 +2,8 @@ import { Education } from "@/components/Education";
 import { InfiniteLoop } from "@/components/InfiniteLoopSlider";
 
 import { Box, Flex, Text } from "@chakra-ui/react";
-import { skillsSliceOne, skillsSliceTwo } from "../services/skills";
 import { ContainerScrollIfinite } from "@/components/ContainerScrollIfinite";
+import skillsData from "../services/skills";
 
 export default function Skills() {
   return (
@@ -86,21 +86,23 @@ export default function Skills() {
           <InfiniteLoop
             reverse={false}
             speed={"18s"}
-            listSkills={skillsSliceOne}
+            listSkills={skillsData.skillsSliceOne}
           />
         </ContainerScrollIfinite>
         <ContainerScrollIfinite>
           <InfiniteLoop
             reverse={true}
             speed={"27s"}
-            listSkills={skillsSliceTwo}
+            listSkills={skillsData.skillsSliceTwo}
           />
         </ContainerScrollIfinite>
         <ContainerScrollIfinite>
           <InfiniteLoop
             reverse={false}
             speed={"40s"}
-            listSkills={skillsSliceOne.concat(skillsSliceTwo)}
+            listSkills={skillsData.skillsSliceOne.concat(
+              skillsData.skillsSliceTwo
+            )}
           />
         </ContainerScrollIfinite>
       </Flex>

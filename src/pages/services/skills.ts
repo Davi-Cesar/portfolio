@@ -1,5 +1,6 @@
 
-export const skillsSliceOne = [
+const skillsData = {
+  skillsSliceOne: [
     { image: "/typescript.png", name: "Typescript" },
     { image: "/react.png", name: "React" },
     { image: "/git.png", name: "Git" },
@@ -7,8 +8,8 @@ export const skillsSliceOne = [
     { image: "/spring.png", name: "Spring" },
     { image: "/postgres.png", name: "Postgres" },
     { image: "/styled.png", name: "Styled" },
-  ];
-  export const skillsSliceTwo = [
+  ],
+  skillsSliceTwo: [
     { image: "/html.png", name: "HTML" },
     { image: "/chakra-ui.png", name: "Chakra UI" },
     { image: "/figma.png", name: "Figma" },
@@ -17,4 +18,7 @@ export const skillsSliceOne = [
     { image: "/java.png", name: "Java" },
     { image: "/vercel.png", name: "Vercel" },
     { image: "/css-3.png", name: "CSS" },
-  ];
+  ]
+};
+
+export default skillsData;

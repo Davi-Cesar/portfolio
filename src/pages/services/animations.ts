@@ -22,10 +22,10 @@ import { keyframes } from "@chakra-ui/react";
     100%  {transform:  translateY(0px)     }
   `;
 
-export  const animationbluelight = `${animationKeyframesbluelight} 13s ease-in-out infinite`;
-export  const animationblue = `${animationKeyframesblue} 15s ease-in-out infinite`;
-export  const animationPonteiro = `${animationPonteirokeyframes} 2s ease-in-out  infinite`;
-export  const animationImage = `${animationImagekeyframes} 5s ease-in-out  infinite`;
+const animationbluelight = `${animationKeyframesbluelight} 13s ease-in-out infinite`;
+const animationblue = `${animationKeyframesblue} 15s ease-in-out infinite`;
+const animationPonteiro = `${animationPonteirokeyframes} 2s ease-in-out  infinite`;
+const animationImage = `${animationImagekeyframes} 5s ease-in-out  infinite`;
 
 export const code = `
     import React from 'react';
@@ -35,3 +35,11 @@ export const code = `
           </div>
     } 
     export default App;`;
+    
+export {
+  animationbluelight,
+  animationblue,
+  animationPonteiro,
+  animationImage,
+  code as default,
+};
