@@ -47,7 +47,7 @@ export const theme = extendTheme({
                     lg: '1.1rem' 
                 },
                
-                p: { base: "0 0%", md: "0 5%", lg: "0 10%" },
+              
                 
                 bg:"teal.900",
                 color: 'white'

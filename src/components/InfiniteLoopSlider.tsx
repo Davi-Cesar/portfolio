@@ -17,6 +17,7 @@ const scrollReverse = keyframes`
     transform: translateX(0%);
   }
     `;
+
 interface Skills {
   image: string;
   name: string;

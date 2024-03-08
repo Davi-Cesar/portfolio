@@ -4,6 +4,7 @@ import { InfiniteLoop } from "@/components/InfiniteLoopSlider";
 import { Box, Flex, Text } from "@chakra-ui/react";
 import { ContainerScrollIfinite } from "@/components/ContainerScrollIfinite";
 import skillsData from "../../services/skills";
+import { motion } from "framer-motion";
 
 export default function Skills() {
   return (
@@ -18,7 +19,14 @@ export default function Skills() {
       }}
       id="skills"
     >
-      <Box w="100%">
+      <Box
+        w="100%"
+        as={motion.div}
+        initial={{ opacity: 0, x: -100 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        exit={{ opacity: 0, x: -100 }}
+        transition={{ durantion: "2s" }}
+      >
         <Text as="h2" color="cyan.600" fontWeight="bold" textAlign="justify">
           Skills
         </Text>
@@ -43,8 +51,8 @@ export default function Skills() {
         </Box>
       </Box>
       <Flex
-        w="100%"
-        h="100%"
+        as={motion.div}
+        boxSize="100%"
         p={{ md: "0rem", lg: "4rem" }}
         justifyContent="center"
         fontFamily="comfortaa"
@@ -56,6 +64,10 @@ export default function Skills() {
         borderRadius={{ base: "10px", lg: "100px 0 100px 0" }}
         backdropFilter="auto"
         backdropBlur="60px"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+        transition={{ durantion: "2s" }}
         _before={{
           content: "''",
           position: "absolute",
@@ -82,27 +94,27 @@ export default function Skills() {
           zIndex: 2,
         }}
       >
+        <Text
+          fontWeight="medium"
+          fontSize="100%"
+          fontFamily="Saira"
+          color="white.50"
+          letterSpacing=".1rem"
+        >
+          <code>&lt;&gt; Experiências &lt;/&gt;</code>
+        </Text>
         <ContainerScrollIfinite>
           <InfiniteLoop
             reverse={false}
-            speed={"18s"}
+            speed={"27s"}
             listSkills={skillsData.skillsSliceOne}
           />
         </ContainerScrollIfinite>
         <ContainerScrollIfinite>
           <InfiniteLoop
             reverse={true}
-            speed={"27s"}
+            speed={"33s"}
             listSkills={skillsData.skillsSliceTwo}
-          />
-        </ContainerScrollIfinite>
-        <ContainerScrollIfinite>
-          <InfiniteLoop
-            reverse={false}
-            speed={"40s"}
-            listSkills={skillsData.skillsSliceOne.concat(
-              skillsData.skillsSliceTwo
-            )}
           />
         </ContainerScrollIfinite>
       </Flex>

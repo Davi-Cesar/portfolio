@@ -8,6 +8,7 @@ const skillsData = {
     { image: "/spring.png", name: "Spring" },
     { image: "/postgres.png", name: "Postgres" },
     { image: "/styled.png", name: "Styled" },
+    { image: "/flutter.svg", name: "Flutter" },
   ],
   skillsSliceTwo: [
     { image: "/html.png", name: "HTML" },

@@ -29,7 +29,6 @@ export default function HomePage() {
             hidden: { opacity: 0, x: 500 },
             visible: { opacity: 1, x: 0 },
           }}
-          // bg="red"
           // @ts-ignore no problem in operation, although type error appears.
           transition={{ duration: 5, delay: 5 }}
           initial="hidden"
@@ -105,7 +104,7 @@ export default function HomePage() {
               boxSize="220px"
               borderRadius="100%"
               boxShadow="0 0 30px #021831"
-              src="./perfil.jpg"
+              src="./perfil.webp"
               alt="Davi César"
               objectFit="cover"
               align="top"
@@ -156,10 +155,7 @@ export default function HomePage() {
                   <Image src="linkedin.png" alt="linkedin" boxSize={5} />
                 </Link>
                 <Link href="/resume.pdf" target="_black">
-                  <Box fontSize="1rem">
-                    Resume
-                    {/* <Connections connection={"Resume"} link="/resume.pdf" /> */}
-                  </Box>
+                  <Box fontSize="1rem">Resume</Box>
                 </Link>
               </HStack>
             </Box>

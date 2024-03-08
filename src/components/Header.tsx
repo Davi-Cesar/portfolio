@@ -41,7 +41,7 @@ export function Header() {
           <ActiveLink name="about" active />
         </>
       );
-    } else if (scrollingValue > 1800 && scrollingValue <= 3000) {
+    } else if (scrollingValue > 1800 && scrollingValue <= 3400) {
       return (
         <>
           <ActiveLink name="home" active />
@@ -50,7 +50,7 @@ export function Header() {
           <ActiveLink name="about" active />
         </>
       );
-    } else if (scrollingValue > 3000) {
+    } else if (scrollingValue > 3400) {
       return (
         <>
           <ActiveLink name="home" active />

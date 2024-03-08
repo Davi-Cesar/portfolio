@@ -5,11 +5,9 @@ import {
   Text,
   Grid,
   useMediaQuery,
-  Flex,
-  HStack,
   Stack,
 } from "@chakra-ui/react";
-import { Variants, motion } from "framer-motion";
+import { motion } from "framer-motion";
 
 interface WorkProps {
   image: string;
@@ -27,12 +25,9 @@ export function WorkItem({ link, number, image, name, text, work }: WorkProps) {
       as={motion.div}
       h="350px"
       w="100%"
-      bgColor="rgba(47, 109, 255, 0.055)"
+      bgColor="rgba(40, 40, 40, 0.055)"
       border="2px solid rgba(95, 95, 95, 0.075)"
       justifySelf="center"
-      bgSize="cover"
-      bgPosition="center"
-      bgRepeat="no-repeat"
       _hover={{
         boxShadow: "-10px 0 20px -10px #429aff",
         borderLeft: "2px solid #429aff",

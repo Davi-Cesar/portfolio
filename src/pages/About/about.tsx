@@ -14,6 +14,7 @@ export default function About() {
     <>
       <Flex h="100%" w="100%" position="relative" direction="column" id="about">
         <Box
+          as={motion.div}
           borderRadius="10px"
           h="100%"
           w="100%"
@@ -22,6 +23,11 @@ export default function About() {
           backdropBlur="8px"
           backdropSaturate="100%"
           zIndex="2"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          transition="linear 1s"
+          transitionDelay=".2s"
         >
           <Flex
             h={{ base: "100%", md: "100%", lg: `calc(100vh - 5rem)` }}
@@ -68,7 +74,7 @@ export default function About() {
                   objectFit="cover"
                   align="top"
                   boxShadow="0 0 40px black"
-                  src="./perfil.jpg"
+                  src="./perfil.webp"
                   alt="Davi César"
                 />
                 <Box p="1rem" textAlign="center">

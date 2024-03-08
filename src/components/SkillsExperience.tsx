@@ -13,7 +13,6 @@ export function SkillsExperience({ image, name }: SkillProps) {
       display="inline-flex"
       direction="column"
       w="120px"
-      m=".6rem"
       align="center"
       justify="center"
       paddingBlock="2rem"
@@ -25,7 +24,7 @@ export function SkillsExperience({ image, name }: SkillProps) {
       <Image
         src={`skills/${image}`}
         alt={image}
-        w={{ base: "30%", md: "30%", lg: "50%" }}
+        w={{ base: "25%", md: "30%", lg: "50%" }}
         objectFit="contain"
       />
       <Box textAlign="center" fontSize="80%" p="5px 0">
