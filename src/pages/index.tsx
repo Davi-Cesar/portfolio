@@ -23,8 +23,8 @@ export default function Home() {
         <Loading />
       ) : (
         <>
-          <Header />
           <Layout>
+            <Header />
             <HomePage />
             <Skills />
             <Works />

@@ -93,6 +93,7 @@ export function Header() {
         textAlign="center"
       >
         {nav()}
+        <a>BR</a>
       </HStack>
     </Flex>
   );
