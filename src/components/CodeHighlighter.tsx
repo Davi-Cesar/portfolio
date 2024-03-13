@@ -5,10 +5,9 @@ import { Flex } from "@chakra-ui/react";
 
 interface CodeHighlighterProps {
   code: string;
-  language: string;
 }
 
-export function CodeHighlighter({ code, language }: CodeHighlighterProps) {
+export function CodeHighlighter({ code }: CodeHighlighterProps) {
   const codeRef = useRef<HTMLDivElement>(null);
   hljs.registerLanguage("javascript", javascript);
 
@@ -16,12 +15,12 @@ export function CodeHighlighter({ code, language }: CodeHighlighterProps) {
     if (codeRef.current) {
       hljs.highlightBlock(codeRef.current);
     }
-  }, [code, language]);
+  }, [code]);
 
   return (
     <Flex justify="center" align="center" textAlign="justify" w="100%" h="100%">
       <pre>
-        <code ref={codeRef} className={`language-${language}`}>
+        <code ref={codeRef} className={"language-javascript"}>
           {code}
         </code>
       </pre>

@@ -53,7 +53,7 @@ export default function HomePage() {
               color="white"
               p="50px"
             >
-              <CodeHighlighter code={code} language="javascript" />
+              <CodeHighlighter code={code} />
             </Flex>
           </Box>
           <Box // Ball Ligth

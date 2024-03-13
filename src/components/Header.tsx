@@ -69,7 +69,6 @@ export function Header() {
       w={scrolling ? "100vw" : ""}
       h="5rem"
       px="5"
-      //borderTop="1px solid #12192B"
       borderBottom="1px solid #12192B"
       align="center"
       justify="center"
@@ -85,7 +84,7 @@ export function Header() {
     >
       <HStack
         as="nav"
-        spacing={{ base: "30px", md: "100px", lg: "200px" }}
+        spacing={{ base: "20px", md: "100px", lg: "200px" }}
         display="flex"
         align="center"
         justify="center"
@@ -93,7 +92,6 @@ export function Header() {
         textAlign="center"
       >
         {nav()}
-        <a>BR</a>
       </HStack>
     </Flex>
   );
