@@ -1,7 +1,7 @@
 const workItemsData = [
     {
       number: 1,
-      image: "casamento.svg",
+      image: "casamento.webp",
       name: "Alinny & Davi",
       work: "Design e Desenvolvimento",
       text: "Wedding Site Event",
@@ -9,7 +9,7 @@ const workItemsData = [
     },
     {
       number: 2,
-      image: "cecane.svg",
+      image: "cecane.webp",
       name: "CECANE",
       work: "Design e Desenvolvimento",
       text: "Implementation of the official CECANE/UFRN website.",
@@ -17,7 +17,7 @@ const workItemsData = [
     },
     {
       number: 3,
-      image: "worldtrip.svg",
+      image: "worldtrip.webp",
       name: "Worldtrip",
       work: "Desenvolvimento",
       text: "Implementation of a travel website.",
@@ -25,7 +25,7 @@ const workItemsData = [
     },
     {
       number: 4,
-      image: "easyscrum.svg",
+      image: "easyscrum.webp",
       name: "Easy Scrum",
       work: "Design e Desenvolvimento",
       text: "Application for managing teams, applying Scrum concepts.",

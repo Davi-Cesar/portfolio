@@ -3,13 +3,12 @@ import { Box, Text, Flex, Image, keyframes } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 
 export default function About() {
-  const animationCirculokeyframes = keyframes`
-  0%    {transform:  rotate(0deg)     }
-  100%  {transform:  rotate(360deg)     }
-`;
-
-  const circulo = `${animationCirculokeyframes} 2s ease-in-out infinite`;
-
+  const animationKeyframesblue = keyframes`
+    0%    {transform:  translateX(120px)      translateY(120px)          }
+    50%   {transform:  translateX(-120px)     translateY(-150px)         } 
+    100%  {transform:  translateX(120px)      translateY(120px)          } 
+  `;
+  const circulo = `${animationKeyframesblue} 15s ease-in-out infinite`;
   return (
     <>
       <Flex h="100%" w="100%" position="relative" direction="column" id="about">
@@ -20,7 +19,7 @@ export default function About() {
           w="100%"
           bgColor="rgba(0, 0, 0, 0.089)"
           backdropFilter="auto"
-          backdropBlur="8px"
+          backdropBlur="90px"
           backdropSaturate="100%"
           zIndex="2"
           initial={{ opacity: 0 }}
@@ -142,11 +141,10 @@ export default function About() {
           left="0"
           m="auto"
           border="2px solid #50505037"
-          borderTop="10px solid #3a6efff9"
+          bg="#3a6effc0"
           borderRadius="50%"
           brightness="40%"
-          filter="auto"
-          animation={circulo}
+          animate={circulo}
         />
       </Flex>
     </>

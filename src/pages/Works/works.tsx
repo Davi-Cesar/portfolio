@@ -3,7 +3,6 @@ import { Box, Text, Grid } from "@chakra-ui/react";
 import workItemsData from "@/services/worksData";
 import { WorkItem } from "@/components/WorkItem";
 import { Work } from "@/components/Work";
-import Link from "next/link";
 
 export default function Works() {
   return (
