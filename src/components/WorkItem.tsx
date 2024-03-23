@@ -7,7 +7,8 @@ import {
   useMediaQuery,
   Stack,
 } from "@chakra-ui/react";
-import { motion } from "framer-motion";
+import { motion, useInView } from "framer-motion";
+import { useRef } from "react";
 
 interface WorkProps {
   image: string;
@@ -20,6 +21,8 @@ interface WorkProps {
 
 export function WorkItem({ link, number, image, name, text, work }: WorkProps) {
   const [isLargerThan1280] = useMediaQuery("(min-width: 780px)");
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
   return (
     <GridItem
       as={motion.div}
@@ -32,6 +35,10 @@ export function WorkItem({ link, number, image, name, text, work }: WorkProps) {
         boxShadow: "-10px 0 20px -10px #429aff",
         borderLeft: "2px solid #429aff",
       }}
+      ref={ref}
+      transform={isInView ? "none" : "translateX(-200px)"}
+      opacity={isInView ? 1 : 0}
+      transition="all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s"
     >
       <Grid
         display="grid"

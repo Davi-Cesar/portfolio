@@ -1,26 +1,32 @@
 import { Flex, HStack } from "@chakra-ui/react";
-
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { ActiveLink } from "./ActiveLink";
+import { useInView } from "framer-motion";
 
 export function Header() {
   const [scrolling, setScrolling] = useState(false);
   const [scrollingValue, setScrollingValue] = useState(0);
 
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
+
   useEffect(() => {
+    function handleScroll() {
+      setScrolling(window.scrollY > 100);
+    }
+
+    function handleScrollPosition() {
+      setScrollingValue(window.scrollY);
+    }
+
     window.addEventListener("scroll", handleScroll);
-
     window.addEventListener("scroll", handleScrollPosition);
-  }, [scrollingValue]);
 
-  function handleScroll() {
-    window.scrollY > 100 ? setScrolling(true) : setScrolling(false);
-  }
-
-  function handleScrollPosition() {
-    const currentPosition = window.scrollY;
-    setScrollingValue(currentPosition);
-  }
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("scroll", handleScrollPosition);
+    };
+  }, []);
 
   const nav = () => {
     if (scrollingValue <= 500) {
@@ -64,7 +70,7 @@ export function Header() {
 
   return (
     <Flex
-      position={scrolling ? "fixed" : "-webkit-sticky"}
+      position={scrolling ? "fixed" : "relative"}
       maxWidth={"100%"}
       w={scrolling ? "100vw" : ""}
       h="5rem"
@@ -79,8 +85,10 @@ export function Header() {
       backdropBlur="15px"
       left={scrolling ? "50%" : ""}
       top={scrolling ? "4%" : ""}
-      transform={scrolling ? "translate(-50%, -50%)" : ""}
-      transition="background .8s"
+      transform={[scrolling ? "translate(-50%, -50%)" : ""]}
+      opacity={isInView ? 1 : 0}
+      ref={ref}
+      transition={"opacity 1s, background .5s"}
     >
       <HStack
         as="nav"

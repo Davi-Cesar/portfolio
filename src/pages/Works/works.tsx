@@ -1,55 +1,54 @@
-import { motion } from "framer-motion";
+import { motion, useInView } from "framer-motion";
 import { Box, Text, Grid } from "@chakra-ui/react";
 import workItemsData from "@/services/worksData";
 import { WorkItem } from "@/components/WorkItem";
 import { Work } from "@/components/Work";
+import { useRef } from "react";
 
 export default function Works() {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
   return (
     <>
       <Grid h="100%" w="100%" gap={4} id="works">
         <Box
-          position="relative"
           padding="1rem 0rem"
+          position="relative"
           boxSize="100%"
           display="flex"
-          textAlign="center"
+          justifyContent="left"
+          textAlign="justify"
+          overflow="hidden"
           id="boxElement"
         >
           <Box
+            as={motion.h2}
             fontFamily="Saira"
             fontWeight="bold"
-            textAlign="justify"
             color="cyan.600"
-            p={{ base: "0rem 2rem", md: "0px", lg: "10px" }}
-            as={motion.h2}
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ durantion: "2s" }}
+            w="500px"
+            // p={{ base: "2rem", md: "0px", lg: "10px" }}
+            ref={ref}
+            transform={isInView ? "none" : "translateX(-200px)"}
+            opacity={isInView ? 1 : 0}
+            transition="all 0.5s"
           >
             Works
             <Text
               fontFamily="Outfit"
               fontWeight="normal"
               fontSize="1.1rem"
-              color="gray.400"
-              textAlign="left"
+              color="gray.300"
             >
-              During my formation at IMD - UFRN participated in some projects.
-              See some of them:
+              During my training at IMD - UFRN, I had the chance to contribute
+              to several projects and I also worked as a freelancer on some
+              occasions. Below, I share some of the projects I was involved in:
             </Text>
           </Box>
         </Box>
 
         {workItemsData.map((workItem, index) => (
-          <motion.div
-            key={index}
-            initial={{ opacity: 0, x: -100 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: -100 }}
-            transition={{ durantion: 0.15, delay: index * 0.1 }}
-          >
+          <motion.div key={index}>
             <WorkItem
               number={workItem.number}
               image={workItem.image}

@@ -1,5 +1,6 @@
 import { Text, Flex, Image, Box } from "@chakra-ui/react";
-import { motion } from "framer-motion";
+import { motion, useInView } from "framer-motion";
+import { useRef } from "react";
 
 interface InstitutionProps {
   name: string;
@@ -16,9 +17,6 @@ export function Institution({ name }: InstitutionProps) {
       borderRadius="10px"
       p="1rem"
       margin=".5rem"
-      initial={{ opacity: 0, y: -100 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      exit={{ opacity: 0, y: -100 }}
     >
       <Box
         boxSize="50px"

@@ -1,24 +1,24 @@
 
 const skillsData = {
   skillsSliceOne: [
-    { image: "/typescript.png", name: "Typescript" },
-    { image: "/react.png", name: "React" },
-    { image: "/git.png", name: "Git" },
-    { image: "/illustrator.png", name: "Illustrator" },
-    { image: "/spring.png", name: "Spring" },
-    { image: "/postgres.png", name: "Postgres" },
-    { image: "/styled.png", name: "Styled" },
-    { image: "/flutter.svg", name: "Flutter" },
+    { image: "/typescript.webp", name: "Typescript" },
+    { image: "/react.webp", name: "React" },
+    { image: "/git.webp", name: "Git" },
+    { image: "/illustrator.webp", name: "Illustrator" },
+    { image: "/spring.webp", name: "Spring" },
+    { image: "/postgres.webp", name: "Postgres" },
+    { image: "/styled.webp", name: "Styled" },
+    { image: "/flutter.webp", name: "Flutter" },
   ],
   skillsSliceTwo: [
-    { image: "/html.png", name: "HTML" },
-    { image: "/chakra-ui.png", name: "Chakra UI" },
-    { image: "/figma.png", name: "Figma" },
-    { image: "/js.png", name: "Javascript" },
+    { image: "/html.webp", name: "HTML" },
+    { image: "/chakra-ui.webp", name: "Chakra UI" },
+    { image: "/figma.webp", name: "Figma" },
+    { image: "/js.webp", name: "Javascript" },
     { image: "/nodejs.webp", name: "Node" },
-    { image: "/java.png", name: "Java" },
-    { image: "/vercel.png", name: "Vercel" },
-    { image: "/css-3.png", name: "CSS" },
+    { image: "/java.webp", name: "Java" },
+    { image: "/vercel.webp", name: "Vercel" },
+    { image: "/css-3.webp", name: "CSS" },
   ]
 };
 

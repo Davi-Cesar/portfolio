@@ -1,6 +1,6 @@
-import React from "react";
+import React, { useRef } from "react";
 import { Box, Flex, HStack, Image, Text } from "@chakra-ui/react";
-import { motion } from "framer-motion";
+import { motion, useInView } from "framer-motion";
 
 import { CodeHighlighter } from "@/components/CodeHighlighter";
 import { Typewriter } from "@/components/Typewriter";
@@ -9,30 +9,30 @@ import { code } from "../../services/animations";
 import animations from "../../services/animations";
 
 export default function HomePage() {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
+
   return (
     <>
       <Flex
         direction={{ base: "column-reverse", md: "column-reverse", lg: "row" }}
-        h={{ base: "100%", md: "100%", lg: `calc(100vh - 5rem)` }}
+        h={`calc(100vh - 5rem)`}
         justify="space-between"
         align="center"
-        p="2rem 0rem"
+        p="4rem 0rem"
         id="home"
+        ref={ref}
       >
         <Flex
           as={motion.div}
           w={{ base: "10%", md: "10%", lg: "50%" }}
           h="100%"
+          display={{ base: "none", lg: "flex" }}
           justify="center"
           align="center"
-          variants={{
-            hidden: { opacity: 0, x: 500 },
-            visible: { opacity: 1, x: 0 },
-          }}
-          // @ts-ignore no problem in operation, although type error appears.
-          transition={{ duration: 5, delay: 5 }}
-          initial="hidden"
-          animate="visible"
+          transform={isInView ? "none" : "translateX(-5rem)"}
+          opacity={isInView ? 1 : 0}
+          transition="all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s"
         >
           <Box
             borderRadius="100px 0 100px 0"
@@ -87,37 +87,49 @@ export default function HomePage() {
           w="50%"
           h="100%"
           justify="center"
-          align="center"
-          variants={{
-            hidden: { opacity: 0, x: -100 },
-            visible: { opacity: 1, x: 0 },
-          }}
-          // @ts-ignore no problem in operation, although type error appears.
-          transition={{ duration: 0.5, delay: 5 }}
-          initial="hidden"
-          animate="visible"
+          align={{ base: "center", md: "center", lg: "left" }}
+          transform={isInView ? "none" : "translateX(5rem)"}
+          opacity={isInView ? 1 : 0}
+          transition="all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s"
         >
-          <Box w="400px">
-            <Image
-              as={motion.img}
-              animation={animations.animationImage}
-              boxSize="220px"
-              borderRadius="100%"
-              boxShadow="0 0 30px #021831"
-              src="./perfil.webp"
-              alt="Davi César"
-              objectFit="cover"
-              align="top"
-            />
-
-            <Flex align="center" w="100%" width="100%" fontWeight="light">
+          <Box w="400px" p="1rem">
+            <Flex
+              as="article"
+              justifyContent={{ base: "center", md: "center", lg: "left" }}
+              w="100%"
+            >
+              <Box
+                as={motion.div}
+                animation={animations.animationImage}
+                boxSize="220px"
+                overflow="hidden"
+                borderRadius="50%"
+                boxShadow="0 0 30px #021831"
+              >
+                <Image
+                  boxSize="220px"
+                  src="./perfil.webp"
+                  alt="Davi César"
+                  objectFit="cover"
+                  align="top"
+                />
+              </Box>
+            </Flex>
+            <Flex
+              align="center"
+              justifyContent={{ base: "center", md: "center", lg: "left" }}
+              w="100%"
+              width="100%"
+              fontWeight="light"
+            >
               <Typewriter develop="Developer" />
+
               <Box
                 as={motion.div}
                 animation={animations.animationPonteiro}
                 _before={{
                   content: "''",
-                  bg: "#2AA5EA",
+                  bg: "#429aff",
                   color: "cyan.600",
                   borderTop: "4px solid",
                   borderBottom: "10px solid",

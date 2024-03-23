@@ -18,11 +18,13 @@ export const theme = extendTheme({
     },
     styles: {
         global: {
-            html: {
-                scrollBehavior: "smooth",  
-            },      
-            body: {
+                html: {
+                    scrollBehavior: "smooth",  
+                },      
+                body: {
+                     scrollSnapType:"y mandatory",
                 
+                overflowY:"scroll",
                 '&::-webkit-scrollbar':{
                     paddingRight: '4px',
                     width: '15px',
@@ -37,7 +39,7 @@ export const theme = extendTheme({
                     background: '#2D3748',
                     border: '3px solid #010D13',
                 },
-                h: '100%',
+           
                 h2: {
                     fontSize: '40px',
                     

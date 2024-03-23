@@ -1,5 +1,6 @@
-import { Text, Flex, Image, Box } from "@chakra-ui/react";
-import { motion } from "framer-motion";
+import { Text, Flex, Image, Box, useMediaQuery } from "@chakra-ui/react";
+import { motion, useInView } from "framer-motion";
+import { useEffect, useRef } from "react";
 
 interface WorkProps {
   name: string;
@@ -9,6 +10,13 @@ interface WorkProps {
   link: string;
 }
 export function Work({ name, color, image, text, link }: WorkProps) {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
+  const [isLargerThan450] = useMediaQuery("(min-width: 450px)");
+  // useEffect(() => {
+  //   // eslint-disable-next-line react-hooks/exhaustive-deps
+  //   isLargerThan450 ? (image = "") : "";
+  // }, [image]);
   return (
     <Flex
       as={motion.div}
@@ -20,19 +28,14 @@ export function Work({ name, color, image, text, link }: WorkProps) {
       backdropBlur="60px"
       borderRadius="10px"
       flexWrap="wrap"
-      initial={{ opacity: 0, x: -150 }}
-      whileInView={{
-        opacity: 1,
-        x: 0,
-        transition: { duration: 0.5 },
-      }}
-      exit={{ opacity: 0, x: -150, transition: { duration: 0.5 } }}
-      whileHover={{
-        transform: "translateY(-10px)",
-      }}
+      ref={ref}
+      transform={isInView ? "none" : "translateX(-200px)"}
+      opacity={isInView ? 1 : 0}
+      transition="all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s"
+      overflow="hidden"
       _hover={{
         _after: {
-          filter: "blur(25px)",
+          filter: "blur(35px)",
           width: "2rem",
           height: "2rem",
         },
@@ -40,9 +43,9 @@ export function Work({ name, color, image, text, link }: WorkProps) {
       _after={{
         content: "''",
         position: "absolute",
-        width: "1.5rem",
-        height: "1.5rem",
-        filter: "blur(15px)",
+        width: "2rem",
+        height: "2rem",
+        filter: "blur(25px)",
         left: "90%",
         right: "0",
         bottom: "0",
@@ -75,7 +78,6 @@ export function Work({ name, color, image, text, link }: WorkProps) {
             letterSpacing=".2rem"
             fontWeight="medium"
             color={color}
-            cursor="default"
           >
             {name}
           </Text>
@@ -84,22 +86,20 @@ export function Work({ name, color, image, text, link }: WorkProps) {
             fontSize="80%"
             w={image ? "100%" : "90%"}
             fontWeight="light"
-            cursor="default"
           >
             {text}
           </Text>
         </Flex>
-
         {image ? (
           <Box
             w="10rem"
             h="2rem"
-            display="flex"
             alignItems="center"
             margin="0 auto"
             bg="transparent"
             padding=".5rem"
             borderRadius="50%"
+            display="flex"
           >
             <Image
               margin="0 auto"

@@ -3,50 +3,59 @@ import { InfiniteLoop } from "@/components/InfiniteLoopSlider";
 
 import { Box, Flex, Text } from "@chakra-ui/react";
 import { ContainerScrollIfinite } from "@/components/ContainerScrollIfinite";
+import { motion, useInView } from "framer-motion";
+import { useRef } from "react";
+
 import skillsData from "../../services/skills";
-import { motion } from "framer-motion";
 
 export default function Skills() {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
   return (
     <Flex
+      as="section"
       h="100%"
       w="100%"
       display="column"
       fontFamily="Saira"
       p={{
-        base: "0rem",
-        lg: "4rem 0rem",
+        base: "0rem 1rem",
+        lg: "4rem",
       }}
+      scrollSnapAlign="start"
       id="skills"
     >
       <Box
-        w="100%"
         as={motion.div}
-        initial={{ opacity: 0, x: -100 }}
-        whileInView={{ opacity: 1, x: 0 }}
-        exit={{ opacity: 0, x: -100 }}
-        transition={{ durantion: "2s" }}
+        w="100%"
+        display="flex"
+        flexDirection="column"
+        justifyContent="left"
+        p={{ base: "0rem", lg: "0rem" }}
+        ref={ref}
+        transform={isInView ? "none" : "translateX(-200px)"}
+        opacity={isInView ? 1 : 0}
+        transition="all 0.5s"
       >
-        <Text as="h2" color="cyan.600" fontWeight="bold" textAlign="justify">
+        <Text as="h2" color="cyan.600" fontWeight="bold" p="0">
           Skills
         </Text>
         <Box
-          w={{ md: "100%", lg: "80%" }}
+          w={{ base: "100%", lg: "60%" }}
           h="100%"
-          p={{ base: "0rem 2rem", md: "0px", lg: "1rem" }}
+          p={{ md: "0px", lg: "10px" }}
           fontWeight="light"
           mb="2rem"
           fontFamily="Outfit"
           color="gray.300"
+          textAlign="justify"
         >
           <Text>
             Over the last 5 years learning several languages ​​and developing
             some personal and college projects, with the aim of becoming a
             Fullstack developer. The main area of ​​my work is front-end
-            development, HTML, CSS, JS, TS, creating Web applications.
-          </Text>
-          <Text p="2rem 0">
-            I have experience with back-end using Spring and Postgres DB.
+            development, HTML, CSS, JS, TS, creating Web applications. I have
+            experience with back-end using Spring and PostgresDB.
           </Text>
         </Box>
       </Box>
@@ -64,10 +73,9 @@ export default function Skills() {
         borderRadius={{ base: "10px", lg: "100px 0 100px 0" }}
         backdropFilter="auto"
         backdropBlur="60px"
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        exit={{ opacity: 0 }}
-        transition={{ durantion: "2s" }}
+        ref={ref}
+        opacity={isInView ? 1 : 0}
+        transition="all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s"
         _before={{
           content: "''",
           position: "absolute",

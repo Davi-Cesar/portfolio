@@ -21,7 +21,17 @@ import { keyframes } from "@chakra-ui/react";
     50%   {transform:  translateY(10px)    }
     100%  {transform:  translateY(0px)     }
   `;
-
+  const blinkind = keyframes`
+   
+    50%   {border-color: transparent    }
+ 
+  `;
+  const typing = keyframes`
+   
+    from   {width: 0    }
+ 
+  `;
+const animationTyping = `${typing}  2s steps(8), ${blinkind} 0.5s infinite step-end`
 const animationbluelight = `${animationKeyframesbluelight} 13s ease-in-out infinite`;
 const animationblue = `${animationKeyframesblue} 15s ease-in-out infinite`;
 const animationPonteiro = `${animationPonteirokeyframes} 2s ease-in-out  infinite`;
@@ -43,5 +53,6 @@ export default {
   animationblue,
   animationPonteiro,
   animationImage,
+  animationTyping,
   code
 };
