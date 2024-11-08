@@ -167,7 +167,7 @@ export default function HomePage() {
                   <Image src="linkedin.png" alt="linkedin" boxSize={5} />
                 </Link>
                 <Link href="/resume.pdf" target="_black">
-                  <Box fontSize="1rem">Resume</Box>
+                  <Box fontSize="1rem">Resume ↗</Box>
                 </Link>
               </HStack>
             </Box>
