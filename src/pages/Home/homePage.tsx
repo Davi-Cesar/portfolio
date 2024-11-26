@@ -161,7 +161,7 @@ export default function HomePage() {
                   <Image src="github.png" alt="github" boxSize={5} />
                 </Link>
                 <Link
-                  href="https://www.linkedin.com/in/davi-c%C3%A9sar-740700166/"
+                  href="linkedin.com/in/davi-bezerra-740700166"
                   target="_black"
                 >
                   <Image src="linkedin.png" alt="linkedin" boxSize={5} />
